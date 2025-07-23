@@ -11606,3 +11606,28 @@ footer .footer-social-links a {
   padding: 8px 16px;
   margin-top: 8px;
   display: inline-block;
+}
+
+/* === Full-width layout override === */
+.container {
+  max-width: 100% !important;
+  width: 100% !important;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+.hero-slider img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Ensure nav spans entire screen */
+.navbar {
+  width: 100%;
+  margin: 0;
+  border: none;
+  border-radius: 0;
+}
+.footer {
+  width: 100%;
+}
