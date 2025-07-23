@@ -12,6 +12,48 @@
   <link rel="stylesheet" href="css/owl-carousel/owl.carousel.min.css" />
   <link rel="stylesheet" href="css/owl-carousel/owl.theme.default.min.css" />
   <link rel="stylesheet" href="css/style.css" />
+  <style>
+    /* Custom styling */
+    .navbar {
+      background-color: transparent;
+      border: none;
+      margin-bottom: 0;
+    }
+    .navbar-brand img {
+      height: 40px;
+    }
+    .donate-btn {
+      background-color: #62bb47;
+      color: #fff !important;
+      border-radius: 4px;
+      padding: 8px 16px;
+      margin-top: 8px;
+      display: inline-block;
+    }
+    .footer-logo img {
+      height: 30px;
+    }
+    .footer {
+      color: #fff;
+      background-color: transparent;
+    }
+    .footer h4,
+    .footer a {
+      color: #fff;
+    }
+    .footer-bottom {
+      background-color: transparent;
+      border-top: 1px solid #555;
+      padding: 20px 0;
+    }
+    .footer-bottom .text-right a {
+      color: #fff;
+    }
+    .footer-social-icons a {
+      color: #fff;
+      margin-left: 10px;
+    }
+  </style>
 </head>
 
 <body class="no-mobile">
@@ -21,22 +63,25 @@
     <div class="container">
       <div class="navbar-header">
         <a class="navbar-brand" href="index.html">
-          <img src="images/logo-4-dark.png" alt="PMAF Logo" height="40" />
+          <img src="images/logo.png" alt="PMAF Logo" />
         </a>
       </div>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="about.html">About Us</a>
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+          <a href="about.html" class="dropdown-toggle" data-toggle="dropdown">About Us <b class="caret"></b></a>
           <ul class="dropdown-menu">
             <li><a href="about-pauli-murray.html">About Pauli Murray</a></li>
           </ul>
         </li>
-        <li><a href="board.html">Board of Directors</a>
+        <li class="dropdown">
+          <a href="board.html" class="dropdown-toggle" data-toggle="dropdown">Board of Directors <b class="caret"></b></a>
           <ul class="dropdown-menu">
             <li><a href="board-member.html">Board Member Bio</a></li>
             <li><a href="join-board.html">Join the Board</a></li>
           </ul>
         </li>
-        <li><a href="programs.html">Programs</a>
+        <li class="dropdown">
+          <a href="programs.html" class="dropdown-toggle" data-toggle="dropdown">Programs <b class="caret"></b></a>
           <ul class="dropdown-menu">
             <li><a href="events.html">Events</a></li>
           </ul>
@@ -44,6 +89,8 @@
         <li><a href="blog.html">Blog / News</a></li>
         <li><a href="faq.html">FAQ</a></li>
         <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
         <li><a class="donate-btn" href="donate.html">Donate</a></li>
       </ul>
     </div>
@@ -91,28 +138,28 @@
   </section>
 
   <!-- Footer -->
-  <footer class="page-section bg-dark footer pb-60">
+  <footer class="footer">
     <div class="container">
       <div class="row">
 
-        <!-- Contact Info -->
-        <div class="col-md-3 col-sm-6 col-xs-12 mb-60">
+        <!-- Column 1: Logo & Contact -->
+        <div class="col-md-3">
           <div class="footer-logo mb-20">
-            <a href="index.html"><img src="images/logo-4-dark.png" alt="PMAF Logo" /></a>
+            <a href="index.html"><img src="images/logo.png" alt="PMAF Logo" /></a>
           </div>
           <p>
-            Pauli Murray Awards Foundation<br />
-            1178 Broadway, 3rd Floor #502<br />
-            New York, NY 10001<br />
-            Phone: 646-736-2596<br />
-            Email: <a href="mailto:info@paulimurrayawards.com">info@paulimurrayawards.com</a>
+            Pauli Murray Awards Foundation<br>
+            1178 Broadway, 3rd Floor #502<br>
+            New York, NY 10001<br>
+            Phone: 646-736-2596<br>
+            <a href="mailto:info@paulimurrayawards.com">info@paulimurrayawards.com</a>
           </p>
         </div>
 
-        <!-- Quick Links -->
-        <div class="col-md-3 col-sm-6 col-xs-12 mb-60">
-          <h4 class="footer-title">Quick Links</h4>
-          <ul class="footer-list">
+        <!-- Column 2: Quick Links -->
+        <div class="col-md-3">
+          <h4>Quick Links</h4>
+          <ul class="list-unstyled">
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About Us</a></li>
             <li><a href="programs.html">Programs</a></li>
@@ -122,10 +169,10 @@
           </ul>
         </div>
 
-        <!-- PMA 2026 -->
-        <div class="col-md-3 col-sm-6 col-xs-12 mb-60">
-          <h4 class="footer-title">PMA 2026</h4>
-          <ul class="footer-list">
+        <!-- Column 3: PMA 2026 -->
+        <div class="col-md-3">
+          <h4>PMA 2026</h4>
+          <ul class="list-unstyled">
             <li><a href="awards.html">PMA</a></li>
             <li><a href="pma-app.html">Application Info</a></li>
             <li><a href="pma-timeline.html">Timeline</a></li>
@@ -133,21 +180,20 @@
           </ul>
         </div>
 
-        <!-- Blog/Recent -->
-        <div class="col-md-3 col-sm-6 col-xs-12 mb-60">
-          <h4 class="footer-title">Recent Posts</h4>
-          <ul class="footer-list">
-            <li><a href="#">Coming Soon</a></li>
-          </ul>
+        <!-- Column 4: Blog/News -->
+        <div class="col-md-3">
+          <h4>Recent Post</h4>
+          <p><a href="blog.html">Read the latest on our blog.</a></p>
         </div>
-      </div>
-    </div>
 
-    <!-- Footer Bottom -->
-    <div class="footer-bottom">
-      <div class="container d-flex justify-content-between">
-        <div>&copy; 2025 Pauli Murray Awards Foundation. All Rights Reserved.</div>
-        <div class="social-icons">
+      </div>
+
+      <!-- Bottom Row -->
+      <div class="footer-bottom d-flex justify-content-between align-items-center">
+        <div class="text-left">
+          &copy; 2025 Pauli Murray Awards Foundation. All Rights Reserved.
+        </div>
+        <div class="footer-social-icons text-right">
           <a href="https://www.facebook.com/PauliMurrayAF/" target="_blank"><i class="fa fa-facebook"></i></a>
           <a href="https://www.instagram.com/PauliMurrayAF/" target="_blank"><i class="fa fa-instagram"></i></a>
           <a href="https://www.linkedin.com/company/paulimurrayawards" target="_blank"><i class="fa fa-linkedin"></i></a>
@@ -158,8 +204,7 @@
 
   <!-- Scripts -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="js/jquery.appear.js"></script>
-  <script src="js/jquery.imagesloaded.pkgd.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
   <script src="js/owl.carousel.min.js"></script>
   <script src="js/main.js"></script>
 </body>
