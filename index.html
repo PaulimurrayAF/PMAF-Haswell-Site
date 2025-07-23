@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="css/style.css" />
+    <!-- Add any other necessary stylesheets (e.g., owl-carousel, animations, etc.) -->
   </head>
 
   <body>
@@ -34,10 +35,11 @@
     </nav>
 
     <!-- Hero Slider -->
-    <section class="hero-slider">
+    <section class="hero-slider owl-carousel">
       <div class="slide"><img src="images/black-trans-man-rainbow-face-paint.jpeg" alt="Rainbow Face Paint" /></div>
-      <div class="slide"><img src="images/no-hug.jpeg" alt="Hugging Men" /></div>
+      <div class="slide"><img src="images/queer-friends.jpeg" alt="Queer Friends" /></div>
       <div class="slide"><img src="images/black-woman-pride-flag-sun.jpeg" alt="Rainbow Flag Sun Woman" /></div>
+      <div class="slide"><img src="images/my-name-is-pauli-murray-no-text.jpeg" alt="Pauli Murray No Text" /></div>
     </section>
 
     <!-- Intro Section -->
@@ -73,80 +75,90 @@
       </div>
     </section>
 
-<!-- Footer -->
-<footer class="page-section bg-dark footer pb-60">
-  <div class="container">
+    <!-- Footer -->
+    <footer class="page-section bg-dark footer pb-60">
+      <div class="container">
+        <div class="row">
 
-    <div class="row">
+          <!-- Logo & About -->
+          <div class="col-md-3 col-sm-6 col-xs-12 mb-60">
+            <div class="logo-footer mb-20">
+              <img src="images/logo.png" alt="PMAF Logo" height="40" />
+            </div>
+            <p>
+              Honoring Black LGBTQ+ brilliance across generations and disciplines. The Pauli Murray Awards Foundation uplifts legacy, liberation, visibility, and community.
+            </p>
+            <div class="footer-social-links mt-20">
+              <a href="https://www.facebook.com/PauliMurrayAF/" title="Facebook" target="_blank"><i class="fa fa-facebook"></i></a>
+              <a href="https://www.instagram.com/PauliMurrayAF/" title="Instagram" target="_blank"><i class="fa fa-instagram"></i></a>
+              <a href="https://www.linkedin.com/company/paulimurrayawards" title="LinkedIn" target="_blank"><i class="fa fa-linkedin"></i></a>
+            </div>
+          </div>
 
-      <!-- Logo & About -->
-      <div class="col-md-3 col-sm-6 col-xs-12 mb-60">
-        <div class="logo-footer mb-20">
-          <img src="images/logo.png" alt="PMAF Logo" height="40" />
+          <!-- Quick Links -->
+          <div class="col-md-3 col-sm-6 col-xs-12 mb-60">
+            <h4 class="footer-title">Quick Links</h4>
+            <ul class="footer-list">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About PMAF</a></li>
+              <li><a href="about-pauli-murray.html">About Pauli Murray</a></li>
+              <li><a href="awards.html">Awards</a></li>
+              <li><a href="programs.html">Programs</a></li>
+              <li><a href="blog.html">News</a></li>
+              <li><a href="donate.html">Donate</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+
+          <!-- Contact Info -->
+          <div class="col-md-3 col-sm-6 col-xs-12 mb-60">
+            <h4 class="footer-title">Contact Us</h4>
+            <div class="footer-text">
+              Pauli Murray Awards Foundation<br />
+              1178 Broadway, 3rd Floor #502<br />
+              New York, NY 10001<br />
+              Phone: 646-736-2596<br />
+              Email: <a href="mailto:info@paulimurrayawards.com">info@paulimurrayawards.com</a>
+            </div>
+          </div>
+
+          <!-- Newsletter Signup -->
+          <div class="col-md-3 col-sm-6 col-xs-12 mb-60">
+            <h4 class="footer-title">Join Our Mailing List</h4>
+            <form id="footer-mailchimp-subscribe" class="form-style-1" action="#" method="post">
+              <input type="email" name="EMAIL" placeholder="Your email" required />
+              <button type="submit"><i class="fa fa-paper-plane"></i></button>
+            </form>
+          </div>
+
         </div>
-        <p>
-          Honoring Black LGBTQ+ brilliance across generations and disciplines. The Pauli Murray Awards Foundation uplifts legacy, liberation, visibility, and community.
-        </p>
-        <div class="footer-social-links mt-20">
-          <a href="https://www.facebook.com/PauliMurrayAF/" title="Facebook" target="_blank"><i class="fa fa-facebook"></i></a>
-          <a href="https://www.instagram.com/PauliMurrayAF/" title="Instagram" target="_blank"><i class="fa fa-instagram"></i></a>
-          <a href="https://www.linkedin.com/company/paulimurrayawards" title="LinkedIn" target="_blank"><i class="fa fa-linkedin"></i></a>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom bg-black">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-6">
+              &copy; 2025 Pauli Murray Awards Foundation. All Rights Reserved.
+            </div>
+            <div class="col-sm-6 text-right">
+              <!-- Removed Haswell credit line -->
+            </div>
+          </div>
         </div>
       </div>
+    </footer>
 
-      <!-- Quick Links -->
-      <div class="col-md-3 col-sm-6 col-xs-12 mb-60">
-        <h4 class="footer-title">Quick Links</h4>
-        <ul class="footer-list">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About PMAF</a></li>
-          <li><a href="about-pauli-murray.html">About Pauli Murray</a></li>
-          <li><a href="awards.html">Awards</a></li>
-          <li><a href="programs.html">Programs</a></li>
-          <li><a href="blog.html">News</a></li>
-          <li><a href="donate.html">Donate</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
+    <!-- Scripts -->
+    <!-- Load jQuery first -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-      <!-- Contact Info -->
-      <div class="col-md-3 col-sm-6 col-xs-12 mb-60">
-        <h4 class="footer-title">Contact Us</h4>
-        <div class="footer-text">
-          Pauli Murray Awards Foundation<br />
-          1178 Broadway, 3rd Floor #502<br />
-          New York, NY 10001<br />
-          Phone: 646-736-2596<br />
-          Email: <a href="mailto:info@paulimurrayawards.com">info@paulimurrayawards.com</a>
-        </div>
-      </div>
+    <!-- Plugin scripts required by slider and effects -->
+    <script src="js/jquery.imagesloaded.pkgd.min.js"></script>
+    <script src="js/jquery.appear.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
 
-      <!-- Newsletter Signup -->
-      <div class="col-md-3 col-sm-6 col-xs-12 mb-60">
-        <h4 class="footer-title">Join Our Mailing List</h4>
-        <form id="footer-mailchimp-subscribe" class="form-style-1" action="#" method="post">
-          <input type="email" name="EMAIL" placeholder="Your email" required />
-          <button type="submit"><i class="fa fa-paper-plane"></i></button>
-        </form>
-      </div>
-
-    </div>
-  </div>
-
-<!-- Footer Bottom -->
-<div class="footer-bottom bg-black">
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-6">
-        &copy; 2025 Pauli Murray Awards Foundation. All Rights Reserved.
-      </div>
-    </div>
-  </div>
-</div>
-
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="js/imagesloaded.pkgd.min.js"></script>
-<script src="js/jquery.appear.js"></script>
-<script src="js/main.js"></script>
+    <!-- Main JS -->
+    <script src="js/main.js"></script>
   </body>
 </html>
