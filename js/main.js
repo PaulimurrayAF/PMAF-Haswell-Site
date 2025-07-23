@@ -706,6 +706,17 @@ function initPageSliders(){
             //paginationNumbers: false,
         });
        
+        // HERO SLIDER - AUTOPLAY WITH DOTS, NO NAV ARROWS
+$(".hero-slider").owlCarousel({
+  items: 1,
+  loop: true,
+  autoplay: true,
+  autoplayTimeout: 4000,
+  autoplayHoverPause: true,
+  dots: true,
+  nav: false
+});
+
         // CAROUSEL CLIENTS ITEMS
 				$("#owl-clients").owlCarousel({
 				  //Set AutoPlay to 3 seconds
