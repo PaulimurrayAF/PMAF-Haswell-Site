@@ -1,56 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <title>Slider Test - Haswell</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8">
+  <title>PMAF Full Slider Test</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
 
   <!-- Stylesheets -->
-  <link rel="stylesheet" href="css/bootstrap.min.css" />
-  <link rel="stylesheet" href="css/owl-carousel/owl.carousel.css" />
-  <link rel="stylesheet" href="css/owl-carousel/owl.theme.css" />
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/owl-carousel/owl.carousel.css">
+  <link rel="stylesheet" href="css/owl-carousel/owl.theme.css">
+  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="css/style.css">
   <style>
-    body, html {
-      margin: 0;
-      padding: 0;
+    .navbar {
+      margin-bottom: 0;
+      border: none;
     }
-    .fullwidth-slider {
-      width: 100%;
-      overflow: hidden;
+    .navbar-nav > li > a {
+      padding: 20px 15px;
     }
-    .owl-carousel .item img {
+    .hero-slider .item {
+      position: relative;
+    }
+    .hero-slider img {
       width: 100%;
       height: auto;
+      display: block;
+    }
+    .caption {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 100%;
+      color: white;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+    }
+    .caption .container {
+      padding: 0 30px;
+    }
+    .btn-success {
+      background-color: #62bb47;
+      border-color: #62bb47;
     }
   </style>
 </head>
 <body>
 
+  <!-- Navigation -->
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">
+          <img src="images/logo.png" alt="PMAF Logo" height="40">
+        </a>
+      </div>
+      <div class="collapse navbar-collapse" id="navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="index.html">Home</a></li>
+          <li class="dropdown">
+            <a href="about.html" class="dropdown-toggle" data-toggle="dropdown">About <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="about-pauli-murray.html">About Pauli Murray</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="board.html" class="dropdown-toggle" data-toggle="dropdown">Board <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a href="board.html">Board of Directors</a></li>
+              <li><a href="board-member.html">Board Member Bio</a></li>
+              <li><a href="join-board.html">Join the Board</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="programs.html" class="dropdown-toggle" data-toggle="dropdown">Programs <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a href="programs.html">Programs</a></li>
+              <li><a href="events.html">Events</a></li>
+            </ul>
+          </li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a class="btn btn-success" style="margin-top:8px; margin-left:10px; color:white;" href="donate.html">Donate</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
   <!-- Hero Slider -->
-  <section class="fullwidth-slider owl-carousel" id="home-slider">
-    <div class="item"><img src="images/black-trans-man-rainbow-face-paint.jpeg" alt="Rainbow Face Paint" /></div>
-    <div class="item"><img src="images/queer-friends.jpeg" alt="Queer Friends Hugging" /></div>
-    <div class="item"><img src="images/black-woman-pride-flag-sun.jpeg" alt="Rainbow Flag Sun Woman" /></div>
-    <div class="item"><img src="images/my-name-is-pauli-murray-no-text.jpeg" alt="Pauli Murray Mural" /></div>
+  <section class="hero-slider owl-carousel owl-theme">
+    <!-- Slide 1 -->
+    <div class="item dark">
+      <img src="images/black-trans-man-rainbow-face-paint.jpeg" alt="Welcome Slide">
+      <div class="caption">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8">
+              <h1 class="wow fadeInUp" data-wow-delay="0.4s">Welcome to the Pauli Murray Awards Foundation</h1>
+              <p class="lead wow fadeInUp" data-wow-delay="0.6s">Honoring legacy. Uplifting Black LGBTQ+ brilliance.</p>
+              <a href="about.html" class="btn btn-primary btn-lg mt-20 wow fadeInUp" data-wow-delay="0.8s">Learn More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="item dark">
+      <img src="images/pretty-killmonger-hair-pride-flag.jpeg" alt="Joy Slide">
+      <div class="caption">
+        <div class="container text-center">
+          <h1 class="wow fadeInUp" data-wow-delay="0.4s">Joy Is Resistance</h1>
+          <p class="lead wow fadeInUp" data-wow-delay="0.6s">Queer futures are beautiful, and they’re already here.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="item dark">
+      <img src="images/black-woman-pride-flag-sun.jpeg" alt="Legacy Slide">
+      <div class="caption">
+        <div class="container text-right">
+          <h1 class="wow fadeInUp" data-wow-delay="0.4s">Our Light Won’t Dim</h1>
+          <p class="lead wow fadeInUp" data-wow-delay="0.6s">Across generations and disciplines, we shine.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 4 -->
+    <div class="item dark">
+      <img src="images/my-name-is-pauli-murray-no-text.jpeg" alt="Pauli Murray Slide">
+      <div class="caption">
+        <div class="container text-center">
+          <h1 class="wow fadeInUp" data-wow-delay="0.4s">Inspired by Pauli Murray</h1>
+          <p class="lead wow fadeInUp" data-wow-delay="0.6s">Support our mission to celebrate and uplift Black LGBTQ+ lives.</p>
+          <a href="donate.html" class="btn btn-success btn-lg mt-20 wow fadeInUp" data-wow-delay="0.8s">Donate</a>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- Scripts -->
   <script src="js/jquery-1.11.2.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
   <script src="js/owl.carousel.min.js"></script>
+  <script src="js/wow.min.js"></script>
   <script>
-    function init_slider() {
-      $('#home-slider').owlCarousel({
-        autoPlay: 5000,
-        navigation: false,
-        pagination: true,
-        singleItem: true,
-        transitionStyle: "fade"
-      });
-    }
-
+    new WOW().init();
     $(document).ready(function () {
-      init_slider();
+      $(".hero-slider").owlCarousel({
+        items: 1,
+        loop: true,
+        autoplay: true,
+        autoplayTimeout: 5000,
+        autoplayHoverPause: false,
+        animateOut: "fadeOut",
+        animateIn: "fadeIn",
+        nav: false,
+        dots: true
+      });
     });
   </script>
 </body>
