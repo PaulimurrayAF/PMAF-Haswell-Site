@@ -11513,3 +11513,64 @@ footer .footer-social-links a {
 .fullscreen-menu .dropdown .submenu li a:hover {
   background-color: #00c08b;
 }
+/* === PMAF Custom Footer & Nav Styles === */
+.footer .footer-title,
+.footer ul,
+.footer-text,
+.footer-bottom {
+  color: #fff;
+}
+
+.footer .footer-logo img {
+  height: 30px;
+}
+
+.footer ul.footer-list {
+  padding-left: 0;
+  list-style: none;
+}
+
+.footer-list li {
+  margin-bottom: 8px;
+}
+
+.footer-bottom {
+  background-color: #000;
+  padding: 20px 0;
+  font-size: 14px;
+}
+
+.footer-bottom .social-icons a {
+  color: #fff;
+  margin-left: 10px;
+}
+
+.navbar {
+  background: transparent !important;
+  border: none;
+  box-shadow: none;
+}
+
+.navbar-nav > li > a {
+  padding: 15px 20px;
+}
+
+.navbar-nav > li > .dropdown-menu {
+  background-color: white;
+  border-radius: 4px;
+  margin-top: 0;
+}
+
+.navbar-nav > li > .dropdown-menu > li > a {
+  padding: 10px 20px;
+  color: #333;
+}
+
+.navbar .donate-btn {
+  background-color: #62bb47;
+  color: white !important;
+  padding: 10px 18px;
+  border-radius: 4px;
+  font-weight: bold;
+  margin-left: auto;
+}
