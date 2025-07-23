@@ -11367,3 +11367,62 @@ footer button[type="submit"]:hover {
   opacity: 1;
   background-color: #00c08b; /* PMAF green accent */
 }
+/* ----------------------------------------
+   Fullscreen Navigation Menu
+---------------------------------------- */
+.fullscreen-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #0d2134; /* dark blue */
+  z-index: 9999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+}
+
+.fullscreen-menu .logo img {
+  height: 40px;
+}
+
+.fullscreen-menu ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 20px;
+}
+
+.fullscreen-menu ul li {
+  display: inline-block;
+}
+
+.fullscreen-menu ul li a {
+  color: #ffffff;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 8px 12px;
+  transition: color 0.3s ease;
+}
+
+.fullscreen-menu ul li a:hover,
+.fullscreen-menu ul li a.active {
+  color: #00c08b; /* PMAF green */
+}
+
+/* Responsive nav tweaks (optional) */
+@media (max-width: 768px) {
+  .fullscreen-menu {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .fullscreen-menu ul {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+}
