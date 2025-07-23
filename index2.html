@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Pauli Murray Awards Foundation</title>
+    <meta name="description" content="Honoring Legacy. Uplifting Black LGBTQ+ Futures." />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="css/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Fonts & Icons -->
+    <link rel="stylesheet" href="css/font-icons.css" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  </head>
+
+  <body class="no-mobile">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            <img src="images/logo.png" alt="PMAF Logo" height="40" />
+          </a>
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="about-pauli-murray.html">About Pauli Murray</a></li>
+          <li><a href="board.html">Board of Directors</a></li>
+          <li><a href="bio.html">Board Member Bio</a></li>
+          <li><a href="join.html">Join the Board</a></li>
+          <li><a href="awards.html">PMAs</a></li>
+          <li><a href="programs.html">Programs</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="blog.html">Blog / News</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="giving.html">Donate</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Hero Slider -->
+    <section class="hero-slider owl-carousel">
+      <div class="slide"><img src="images/black-trans-man-rainbow-face-paint.jpeg" alt="Rainbow Face Paint" /></div>
+      <div class="slide"><img src="images/queer-friends.jpeg" alt="Queer Friends Hugging" /></div>
+      <div class="slide"><img src="images/black-woman-pride-flag-sun.jpeg" alt="Rainbow Flag Sun Woman" /></div>
+      <div class="slide"><img src="images/my-name-is-pauli-murray-no-text.jpeg" alt="Pauli Murray Mural" /></div>
+    </section>
+
+    <!-- Intro Section -->
+    <section class="page-section pt-60 pb-60 text-center">
+      <div class="container">
+        <h2 class="section-title">Honoring Legacy. Uplifting Black LGBTQ+ Futures.</h2>
+        <a href="about.html" class="btn btn-mod btn-medium btn-round">Learn More</a>
+      </div>
+    </section>
+
+    <!-- Core Values -->
+    <section class="page-section pt-60 pb-60 bg-light">
+      <div class="container text-center">
+        <h2 class="section-title">Our Values</h2>
+        <div class="row mt-40">
+          <div class="col-sm-3"><h4>Legacy</h4><p>We honor the past by celebrating those who paved the way.</p></div>
+          <div class="col-sm-3"><h4>Liberation</h4><p>We uplift freedom and autonomy for Black LGBTQ+ communities.</p></div>
+          <div class="col-sm-3"><h4>Visibility</h4><p>We create platforms for those too often overlooked.</p></div>
+          <div class="col-sm-3"><h4>Community</h4><p>We build bridges and invest in connection.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mailing List Signup -->
+    <section class="page-section pt-60 pb-60">
+      <div class="container text-center">
+        <h2 class="section-title">Join Our Mailing List</h2>
+        <form id="mailchimp-form" class="form-inline mt-30">
+          <div class="form-group">
+            <input type="email" class="form-control input-lg" placeholder="Enter your email" required />
+          </div>
+          <button type="submit" class="btn btn-mod btn-medium btn-round">Subscribe</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="page-section bg-dark footer pb-60">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-3">
+            <img src="images/logo.png" alt="PMAF Logo" height="40" />
+            <p class="mt-20">The Pauli Murray Awards Foundation honors and supports Black LGBTQ+ leadership through visibility, recognition, and impact.</p>
+          </div>
+          <div class="col-sm-3">
+            <h5 class="footer-title">Quick Links</h5>
+            <ul class="list-unstyled">
+              <li><a href="awards.html">The PMAs</a></li>
+              <li><a href="programs.html">Programs</a></li>
+              <li><a href="giving.html">Donate</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="col-sm-3">
+            <h5 class="footer-title">Contact Info</h5>
+            <p>1178 Broadway, 3rd Floor #502<br />New York, NY 10001</p>
+            <p>Email: giving@paulimurrayawards.com</p>
+          </div>
+          <div class="col-sm-3">
+            <h5 class="footer-title">Stay Connected</h5>
+            <form class="form">
+              <input type="email" class="form-control mb-10" placeholder="Email address" />
+              <button type="submit" class="btn btn-mod btn-gray btn-small">Sign Up</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $(".hero-slider").owlCarousel({
+          items: 1,
+          loop: true,
+          autoplay: true,
+          autoplayTimeout: 4000,
+          nav: false,
+          dots: true
+        });
+      });
+    </script>
+  </body>
+</html>
