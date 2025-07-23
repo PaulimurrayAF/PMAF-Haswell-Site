@@ -11426,3 +11426,90 @@ footer button[type="submit"]:hover {
     margin-top: 10px;
   }
 }
+/* Dropdown styles */
+.fullscreen-menu ul li.dropdown {
+  position: relative;
+}
+
+.fullscreen-menu ul li .submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #0d2134;
+  padding: 10px 0;
+  min-width: 200px;
+  z-index: 1000;
+  border-top: 2px solid #00c08b;
+}
+
+.fullscreen-menu ul li .submenu li {
+  display: block;
+}
+
+.fullscreen-menu ul li .submenu li a {
+  display: block;
+  padding: 10px 20px;
+  color: #ffffff;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.fullscreen-menu ul li .submenu li a:hover {
+  background-color: #00c08b;
+  color: #0d2134;
+}
+
+/* Show submenu on hover */
+.fullscreen-menu ul li.dropdown:hover .submenu {
+  display: block;
+}
+/* NavBar - CTA Highlight for Donate */
+.fullscreen-menu ul li a.donate-button {
+  background-color: #00c08b;
+  color: #fff !important;
+  padding: 8px 15px;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+/* Footer Text Contrast */
+footer.footer p,
+footer.footer a,
+footer.footer .footer-title {
+  color: #f2f2f2;
+}
+
+footer .footer-list li a {
+  color: #dcdcdc;
+}
+
+footer .footer-social-links a {
+  color: #f2f2f2;
+  margin-left: 10px;
+  font-size: 16px;
+}
+
+.footer-bottom {
+  font-size: 14px;
+  color: #aaa;
+  border-color: #333;
+}
+
+/* Dropdown Menu Styling */
+.fullscreen-menu .dropdown .submenu {
+  background-color: #1e1e1e;
+  border-radius: 4px;
+  padding: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.fullscreen-menu .dropdown .submenu li a {
+  color: #fff;
+  padding: 5px 10px;
+  display: block;
+}
+
+.fullscreen-menu .dropdown .submenu li a:hover {
+  background-color: #00c08b;
+}
