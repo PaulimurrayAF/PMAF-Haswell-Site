@@ -4,48 +4,66 @@
   <meta charset="utf-8" />
   <title>Slider Test</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Owl Carousel CSS -->
   <link rel="stylesheet" href="css/owl-carousel/owl.carousel.min.css" />
   <link rel="stylesheet" href="css/owl-carousel/owl.theme.default.min.css" />
+
   <style>
     body {
       margin: 0;
       padding: 0;
     }
+
     .hero-slider img {
       width: 100%;
       height: auto;
+      display: block;
+    }
+
+    .owl-dots,
+    .owl-nav {
+      position: absolute;
+      bottom: 10px;
+      left: 0;
+      right: 0;
+      text-align: center;
+    }
+
+    .owl-nav button {
+      background: transparent;
+      border: none;
+      font-size: 2rem;
+      color: #333;
     }
   </style>
 </head>
 <body>
 
-<section class="hero-slider owl-carousel">
-  <div class="slide">
-    <img src="images/black-trans-man-rainbow-face-paint.jpeg" alt="Rainbow Face Paint" />
-  </div>
-  <div class="slide">
-    <img src="images/queer-friends.jpeg" alt="Queer Friends Hugging" />
-  </div>
-  <div class="slide">
-    <img src="images/black-woman-pride-flag-sun.jpeg" alt="Rainbow Flag Sun Woman" />
-  </div>
-</section>
+  <!-- Hero Slider -->
+  <section class="hero-slider owl-carousel owl-theme">
+    <div class="slide"><img src="images/black-trans-man-rainbow-face-paint.jpeg" alt="Rainbow Face Paint" /></div>
+    <div class="slide"><img src="images/queer-friends.jpeg" alt="Queer Friends Hugging" /></div>
+    <div class="slide"><img src="images/black-woman-pride-flag-sun.jpeg" alt="Rainbow Flag Sun Woman" /></div>
+  </section>
 
-
+  <!-- jQuery & Owl Carousel JS -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="js/owl.carousel.min.js"></script>
+
   <script>
     $(document).ready(function () {
       $(".hero-slider").owlCarousel({
-  items: 1,
-  loop: true,
-  autoplay: true,
-  autoplayTimeout: 3000,
-  autoplayHoverPause: true,
-  nav: true,
-  dots: true
-});
+        items: 1,
+        loop: true,
+        autoplay: true,
+        autoplayTimeout: 4000,
+        autoplayHoverPause: true,
+        nav: true,
+        dots: true
+      });
     });
   </script>
+
 </body>
 </html>
