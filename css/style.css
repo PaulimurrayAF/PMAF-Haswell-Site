@@ -11574,3 +11574,35 @@ footer .footer-social-links a {
   font-weight: bold;
   margin-left: auto;
 }
+
+/* === PMAF Custom Styles === */
+
+/* Fix navbar alignment */
+.navbar-nav {
+  margin-left: 0;
+}
+
+/* Dropdown on hover */
+.navbar-nav > li.dropdown:hover > .dropdown-menu {
+  display: block;
+}
+.navbar-nav > li.dropdown > a:hover {
+  background-color: transparent;
+}
+
+/* Improve footer text visibility */
+.footer,
+.footer a,
+.footer h4,
+.footer p {
+  color: #eaeaea !important;
+}
+
+/* Fix donate button styling */
+.donate-btn {
+  background-color: #62bb47;
+  color: white !important;
+  border-radius: 4px;
+  padding: 8px 16px;
+  margin-top: 8px;
+  display: inline-block;
