@@ -2,68 +2,56 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>Slider Test</title>
+  <title>Slider Test - Haswell</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- Owl Carousel CSS -->
-  <link rel="stylesheet" href="css/owl-carousel/owl.carousel.min.css" />
-  <link rel="stylesheet" href="css/owl-carousel/owl.theme.default.min.css" />
-
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/owl-carousel/owl.carousel.css" />
+  <link rel="stylesheet" href="css/owl-carousel/owl.theme.css" />
+  <link rel="stylesheet" href="css/style.css" />
   <style>
-    body {
+    body, html {
       margin: 0;
       padding: 0;
     }
-
-    .hero-slider img {
+    .fullwidth-slider {
+      width: 100%;
+      overflow: hidden;
+    }
+    .owl-carousel .item img {
       width: 100%;
       height: auto;
-      display: block;
-    }
-
-    .owl-dots,
-    .owl-nav {
-      position: absolute;
-      bottom: 10px;
-      left: 0;
-      right: 0;
-      text-align: center;
-    }
-
-    .owl-nav button {
-      background: transparent;
-      border: none;
-      font-size: 2rem;
-      color: #333;
     }
   </style>
 </head>
 <body>
 
   <!-- Hero Slider -->
-  <section class="hero-slider owl-carousel owl-theme">
-    <div class="slide"><img src="images/black-trans-man-rainbow-face-paint.jpeg" alt="Rainbow Face Paint" /></div>
-    <div class="slide"><img src="images/queer-friends.jpeg" alt="Queer Friends Hugging" /></div>
-    <div class="slide"><img src="images/black-woman-pride-flag-sun.jpeg" alt="Rainbow Flag Sun Woman" /></div>
+  <section class="fullwidth-slider owl-carousel" id="home-slider">
+    <div class="item"><img src="images/black-trans-man-rainbow-face-paint.jpeg" alt="Rainbow Face Paint" /></div>
+    <div class="item"><img src="images/queer-friends.jpeg" alt="Queer Friends Hugging" /></div>
+    <div class="item"><img src="images/black-woman-pride-flag-sun.jpeg" alt="Rainbow Flag Sun Woman" /></div>
+    <div class="item"><img src="images/my-name-is-pauli-murray-no-text.jpeg" alt="Pauli Murray Mural" /></div>
   </section>
 
-  <!-- jQuery & Owl Carousel JS -->
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- Scripts -->
+  <script src="js/jquery-1.11.2.min.js"></script>
   <script src="js/owl.carousel.min.js"></script>
-
   <script>
-    $(document).ready(function () {
-      $(".hero-slider").owlCarousel({
-        items: 1,
-        loop: true,
-        autoplay: true,
-        autoplayTimeout: 4000,
-        autoplayHoverPause: true,
-        nav: true,
-        dots: true
+    function init_slider() {
+      $('#home-slider').owlCarousel({
+        autoPlay: 5000,
+        navigation: false,
+        pagination: true,
+        singleItem: true,
+        transitionStyle: "fade"
       });
+    }
+
+    $(document).ready(function () {
+      init_slider();
     });
   </script>
-
 </body>
 </html>
