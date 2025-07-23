@@ -11675,3 +11675,71 @@ footer .footer-list li a,
   justify-content: space-between;
   flex-wrap: wrap;
 }
+/* === PMAF Custom Styles === */
+body {
+  color: #2f2f2f;
+}
+
+a {
+  color: #2f2f2f;
+}
+a:hover, a:focus, a:active {
+  color: #5b82c1;
+}
+
+h1, h2, h3, h4, h5, h6,
+strong, b {
+  color: #24354e;
+}
+
+.navbar {
+  background-color: transparent;
+  border: none;
+}
+
+.navbar-nav {
+  margin-left: auto;
+}
+
+.navbar-default .navbar-nav > li > a {
+  color: #2f2f2f;
+}
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li.open > a {
+  color: #5b82c1;
+}
+
+.dropdown-menu {
+  background-color: white;
+  border-radius: 0;
+}
+
+.dropdown-menu > li > a {
+  color: #24354e;
+}
+
+.donate-btn {
+  background-color: #62bb47;
+  color: #fff !important;
+  padding: 8px 15px;
+  border-radius: 4px;
+  margin-left: 10px;
+  display: inline-block;
+}
+
+.footer {
+  background-color: #2f2f2f;
+  color: #fff;
+}
+
+.footer a {
+  color: #fff;
+}
+.footer a:hover {
+  color: #5b82c1;
+}
+
+.footer .logo-footer img {
+  max-height: 50px;
+}
