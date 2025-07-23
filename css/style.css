@@ -11631,3 +11631,47 @@ footer .footer-social-links a {
 .footer {
   width: 100%;
 }
+
+/* PMAF Custom Styling */
+
+/* Standard text color */
+body, p, li, a {
+  color: #2f2f2f;
+}
+
+/* Headlines, bold, titles */
+h1, h2, h3, h4, h5, h6, strong, b {
+  color: #24354e;
+}
+
+/* Active/clicked link color */
+a:active, a:focus {
+  color: #5b82c1;
+}
+
+/* Footer background and text */
+footer {
+  background-color: #2f2f2f !important;
+  color: #ffffff;
+}
+
+footer a,
+footer .footer-title,
+footer .footer-text,
+footer .footer-list li a,
+.footer-bottom {
+  color: #ffffff;
+}
+
+.footer-social-links a i {
+  color: #ffffff;
+}
+
+.footer-bottom {
+  border-top: 1px solid #444;
+  padding-top: 15px;
+  font-size: 13px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
