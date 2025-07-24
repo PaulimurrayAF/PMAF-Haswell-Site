@@ -5,7 +5,7 @@
   <title>PMAF Full Slider</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- Stylesheets -->
+  <!-- CSS -->
   <link rel="stylesheet" href="css/bootstrap.min.css" />
   <link rel="stylesheet" href="css/owl-carousel/owl.carousel.min.css" />
   <link rel="stylesheet" href="css/owl-carousel/owl.theme.default.min.css" />
@@ -19,19 +19,19 @@
       overflow-x: hidden;
     }
 
-    .hero-slider {
+    .hero-slider, .preview-slider {
       position: relative;
     }
 
     .hero-slider .item {
       height: 100vh;
       background-size: cover;
-      background-position: center center;
+      background-position: center;
       position: relative;
-      color: #fff;
       display: flex;
-      justify-content: flex-end;
       align-items: center;
+      justify-content: flex-end;
+      color: #fff;
       text-align: right;
       padding: 0 10%;
     }
@@ -63,7 +63,7 @@
     }
 
     .btn-green {
-      background: #62bb47;
+      background-color: #62bb47;
       border: none;
     }
 
@@ -123,15 +123,26 @@
       font-size: 40px !important;
       border: none !important;
     }
+
+    /* Preview Thumbs */
+    .preview-slider .item {
+      height: 120px;
+      background-size: cover;
+      background-position: center;
+      cursor: pointer;
+    }
+
+    .preview-slider {
+      margin-top: -10px;
+      padding: 0 10%;
+    }
   </style>
 </head>
 
 <body>
 
-  <!-- Slider -->
-  <div class="hero-slider owl-carousel owl-theme">
-    
-    <!-- Slide 1 -->
+  <!-- Main Slider -->
+  <div class="hero-slider owl-carousel owl-theme" id="mainSlider">
     <div class="item" style="background-image: url('images/black-trans-man-rainbow-face-paint.jpeg');">
       <div class="slider-content animated fadeInRight">
         <h2>Welcome to the<br>Pauli Murray Awards Foundation</h2>
@@ -140,7 +151,6 @@
       </div>
     </div>
 
-    <!-- Slide 2 -->
     <div class="item" style="background-image: url('images/black-woman-pride-flag-sun.jpeg');">
       <div class="slider-content animated fadeInRight">
         <h2>We Shine Together</h2>
@@ -148,7 +158,6 @@
       </div>
     </div>
 
-    <!-- Slide 3 -->
     <div class="item" style="background-image: url('images/pretty-killmonger-hair-pride-flag.jpeg');">
       <div class="slider-content animated fadeInRight">
         <h2>Fund the Future</h2>
@@ -157,7 +166,6 @@
       </div>
     </div>
 
-    <!-- Slide 4 -->
     <div class="item" style="background-image: url('images/my-name-is-pauli-murray-no-text.jpeg');">
       <div class="slider-content animated fadeInRight">
         <h2 style="text-align: right;">Poet. Lawyer.<br>Activist. Priest.<br>Prophet. Saint.</h2>
@@ -167,6 +175,14 @@
       </div>
       <div class="play-button" onclick="openModal()">▶</div>
     </div>
+  </div>
+
+  <!-- Preview Carousel -->
+  <div class="preview-slider owl-carousel owl-theme" id="previewSlider">
+    <div class="item" style="background-image: url('images/black-trans-man-rainbow-face-paint.jpeg');"></div>
+    <div class="item" style="background-image: url('images/black-woman-pride-flag-sun.jpeg');"></div>
+    <div class="item" style="background-image: url('images/pretty-killmonger-hair-pride-flag.jpeg');"></div>
+    <div class="item" style="background-image: url('images/my-name-is-pauli-murray-no-text.jpeg');"></div>
   </div>
 
   <!-- Video Modal -->
@@ -183,19 +199,43 @@
   <script src="js/bootstrap.min.js"></script>
   <script src="js/owl.carousel.min.js"></script>
   <script>
+    var mainSlider, previewSlider;
+
     $(document).ready(function () {
-      $(".hero-slider").owlCarousel({
+      mainSlider = $("#mainSlider");
+      previewSlider = $("#previewSlider");
+
+      mainSlider.owlCarousel({
         items: 1,
         loop: true,
         autoplay: true,
-        autoplayTimeout: 4000,
-        smartSpeed: 1000,
+        autoplayTimeout: 5000,
+        smartSpeed: 800,
         nav: true,
-        dots: true,
-        navText: ["<", ">"],
+        dots: false,
         animateOut: 'fadeOut',
-        animateIn: 'fadeIn'
+        animateIn: 'fadeIn',
+        onChanged: syncPosition
       });
+
+      previewSlider.owlCarousel({
+        items: 4,
+        margin: 10,
+        center: false,
+        nav: false,
+        dots: false
+      });
+
+      previewSlider.on("click", ".owl-item", function () {
+        var index = $(this).index();
+        mainSlider.trigger("to.owl.carousel", [index, 300]);
+      });
+
+      function syncPosition(event) {
+        var index = event.item.index - event.relatedTarget._clones.length / 2;
+        previewSlider.find(".owl-item").removeClass("current");
+        previewSlider.find(".owl-item").eq(index % 4).addClass("current");
+      }
     });
 
     function openModal() {
