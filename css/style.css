@@ -11743,3 +11743,28 @@ strong, b {
 .footer .logo-footer img {
   max-height: 50px;
 }
+.caption {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+  padding: 20px;
+  width: 100%;
+  z-index: 10;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+}
+
+.caption h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.caption p {
+  font-size: 20px;
+  color: #ffffff;
+}
+
+.text-left { left: 5%; text-align: left; }
+.text-center { left: 50%; transform: translate(-50%, -50%); text-align: center; }
+.text-right { right: 5%; text-align: right; }
