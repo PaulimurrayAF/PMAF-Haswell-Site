@@ -7,30 +7,22 @@
 
   <!-- Styles -->
   <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/animate.css" /> <!-- corrected -->
   <link rel="stylesheet" href="css/owl-carousel/owl.carousel.min.css" />
   <link rel="stylesheet" href="css/owl-carousel/owl.theme.default.min.css" />
-  <link rel="stylesheet" href="css/animate.min.css" />
   <link rel="stylesheet" href="css/style.css" />
-
   <style>
-    body, html {
+    body {
       margin: 0;
       padding: 0;
-      overflow-x: hidden;
     }
 
     .hero-slider {
       position: relative;
     }
 
-    .hero-slider .slide {
+    .hero-slider .item {
       position: relative;
-    }
-
-    .hero-slider img {
-      width: 100%;
-      height: auto;
-      display: block;
     }
 
     .hero-caption {
@@ -38,40 +30,30 @@
       top: 50%;
       right: 5%;
       transform: translateY(-50%);
-      color: #fff;
+      color: white;
       text-align: right;
+      max-width: 550px;
       z-index: 10;
     }
 
-    .hero-caption h1 {
-      font-size: 48px;
-      text-transform: uppercase;
+    .hero-caption h2 {
+      font-size: 54px;
       font-weight: 700;
-      margin-bottom: 15px;
+      margin-bottom: 20px;
+      color: white;
     }
 
-    .hero-caption h4 {
+    .hero-caption h5 {
       font-size: 20px;
-      margin-bottom: 25px;
       font-weight: 400;
+      margin-bottom: 30px;
+      color: white;
     }
 
     .hero-caption .btn {
+      font-size: 18px;
+      padding: 12px 28px;
       margin-left: 10px;
-      padding: 10px 24px;
-      font-size: 14px;
-      text-transform: uppercase;
-    }
-
-    .btn-outline-white {
-      border: 2px solid #fff;
-      color: #fff;
-      background: transparent;
-    }
-
-    .btn-outline-white:hover {
-      background: #fff;
-      color: #2f2f2f;
     }
 
     .btn-donate {
@@ -80,95 +62,108 @@
       border: none;
     }
 
-    .btn-donate:hover {
-      background-color: #4ea33a;
+    .btn-learn {
+      border: 2px solid white;
+      color: white;
+      background: transparent;
     }
 
-    .video-play-btn {
-      display: inline-block;
-      width: 64px;
-      height: 64px;
+    .video-btn {
+      font-size: 18px;
+      padding: 12px 28px;
       border: 2px solid white;
-      border-radius: 50%;
-      line-height: 64px;
-      text-align: center;
       color: white;
-      font-size: 28px;
-      cursor: pointer;
+      background: transparent;
+    }
+
+    .video-btn:hover {
+      background: white;
+      color: black;
     }
   </style>
 </head>
+
 <body>
-
-<!-- Slider Section -->
-<section class="hero-slider owl-carousel owl-theme">
-  <!-- Slide 1: Welcome -->
-  <div class="slide">
-    <img src="images/black-trans-man-rainbow-face-paint.jpeg" alt="Rainbow Face Paint" />
-    <div class="hero-caption text-right animated fadeInRight">
-      <h4 class="animated fadeInDown">Welcome to the</h4>
-      <h1 class="animated fadeInUp">Pauli Murray Awards Foundation</h1>
-      <h4 class="animated fadeInUp">Honoring Black LGBTQ+ brilliance across generations and disciplines.</h4>
-      <a href="about.html" class="btn btn-outline-white">Learn More</a>
+  <!-- Slider -->
+  <section class="hero-slider owl-carousel owl-theme">
+    
+    <!-- Slide 1 -->
+    <div class="item">
+      <img src="images/black-trans-man-rainbow-face-paint.jpeg" alt="Black Trans Man with Rainbow Paint" />
+      <div class="hero-caption">
+        <h2 class="wow fadeInUp" data-wow-delay="0.5s">Welcome to the</h2>
+        <h2 class="wow fadeInUp" data-wow-delay="0.8s">Pauli Murray Awards Foundation</h2>
+        <h5 class="wow fadeInUp" data-wow-delay="1.2s">Honoring Black LGBTQ+ brilliance across generations and disciplines.</h5>
+        <a href="about.html" class="btn btn-learn wow fadeInUp" data-wow-delay="1.6s">Learn More</a>
+      </div>
     </div>
-  </div>
 
-  <!-- Slide 2: Donation -->
-  <div class="slide">
-    <img src="images/pretty-killmonger-hair-pride-flag.jpeg" alt="Pretty Killmonger" />
-    <div class="hero-caption text-right animated fadeInRight">
-      <h4 class="animated fadeInDown">Support Our Work</h4>
-      <h1 class="animated fadeInUp">Fund the Future</h1>
-      <h4 class="animated fadeInUp">Your gift uplifts 40 emerging Black LGBTQ+ leaders. Every dollar helps us build something enduring.</h4>
-      <a href="donate.html" class="btn btn-donate">Donate</a>
+    <!-- Slide 2 -->
+    <div class="item">
+      <img src="images/pretty-killmonger-hair-pride-flag.jpeg" alt="Killmonger Pride Flag" />
+      <div class="hero-caption">
+        <h2 class="wow fadeInUp" data-wow-delay="0.5s">Fund the Future</h2>
+        <h5 class="wow fadeInUp" data-wow-delay="0.8s">
+          Your gift honors 40 emerging<br />
+          Black LGBTQ+ leaders.
+        </h5>
+        <a href="donate.html" class="btn btn-donate wow fadeInUp" data-wow-delay="1.2s">Donate</a>
+      </div>
     </div>
-  </div>
 
-  <!-- Slide 3: Black Woman Sun -->
-  <div class="slide">
-    <img src="images/black-woman-pride-flag-sun.jpeg" alt="Sun Woman" />
-    <div class="hero-caption text-right animated fadeInRight">
-      <h4 class="animated fadeInDown">We Rise in Visibility</h4>
-      <h1 class="animated fadeInUp">We Shine Together</h1>
-      <h4 class="animated fadeInUp">Every honoree is a mirror for what’s possible. Every category, a new story told boldly.</h4>
+    <!-- Slide 3 -->
+    <div class="item">
+      <img src="images/black-woman-pride-flag-sun.jpeg" alt="Black Woman with Pride Flag" />
+      <div class="hero-caption">
+        <h2 class="wow fadeInUp" data-wow-delay="0.5s">We Shine Together</h2>
+        <h5 class="wow fadeInUp" data-wow-delay="0.8s">
+          Every honoree is a mirror for<br />
+          what's possible. Every story matters.
+        </h5>
+      </div>
     </div>
-  </div>
 
-  <!-- Slide 4: Video -->
-  <div class="slide">
-    <img src="images/my-name-is-pauli-murray-no-text.jpeg" alt="Pauli Murray Film" />
-    <div class="hero-caption text-right animated fadeInRight">
-      <h4 class="animated fadeInDown">Poet. Lawyer. Activist. Priest. Prophet. Saint.</h4>
-      <h1 class="animated fadeInUp">Architect of Modern American Democracy</h1>
-      <h4 class="animated fadeInUp">Learn more about the life of Rev. Dr. Pauli Murray in this powerful documentary.</h4>
-      <a href="https://www.youtube.com/watch?v=Ep0-MwFh2iQ" class="video-play-btn" target="_blank"><i class="fa fa-play"></i></a>
+    <!-- Slide 4 -->
+    <div class="item">
+      <img src="images/my-name-is-pauli-murray-no-text.jpeg" alt="My Name Is Pauli Murray" />
+      <div class="hero-caption">
+        <h2 class="wow fadeInUp" data-wow-delay="0.5s">
+          Poet. Lawyer. Activist. Priest. Prophet. Saint.
+        </h2>
+        <h2 class="wow fadeInUp" data-wow-delay="0.8s">
+          Architect of Modern American Democracy
+        </h2>
+        <h5 class="wow fadeInUp" data-wow-delay="1.2s">
+          Click to watch the trailer from the powerful documentary<br />
+          about Rev. Dr. Pauli Murray, Esq.
+        </h5>
+        <a href="https://www.youtube.com/watch?v=YJyX9j0rs3c" class="video-btn wow fadeInUp" data-wow-delay="1.6s">
+          Watch the Trailer
+        </a>
+      </div>
     </div>
-  </div>
-</section>
 
-<!-- Scripts -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/owl.carousel.min.js"></script>
-<script>
-  $(document).ready(function () {
-    $(".hero-slider").owlCarousel({
-      items: 1,
-      loop: true,
-      autoplay: true,
-      autoplayTimeout: 5000,
-      autoplayHoverPause: false,
-      animateOut: 'fadeOut',
-      animateIn: 'fadeIn',
-      nav: false,
-      dots: true,
-      smartSpeed: 900
+  </section>
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/wow.min.js"></script>
+  <script>
+    new WOW().init();
+    $(document).ready(function () {
+      $(".hero-slider").owlCarousel({
+        items: 1,
+        loop: true,
+        autoplay: true,
+        autoplayTimeout: 5000,
+        autoplayHoverPause: true,
+        animateOut: 'fadeOut',
+        nav: false,
+        dots: false
+      });
     });
-  });
-</script>
-
-<!-- Font Awesome (optional for play icon) -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-
+  </script>
 </body>
 </html>
