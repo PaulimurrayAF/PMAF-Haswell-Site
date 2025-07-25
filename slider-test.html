@@ -1,225 +1,198 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>PMAF Full Slider</title>
+  <meta charset="utf-8" />
+  <title>PMAF Full Slider Test</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- CSS -->
+  <!-- CSS Dependencies -->
   <link rel="stylesheet" href="css/bootstrap.min.css" />
-  <link rel="stylesheet" href="css/owl-carousel/owl.carousel.min.css" />
-  <link rel="stylesheet" href="css/owl-carousel/owl.theme.default.min.css" />
   <link rel="stylesheet" href="css/animate.css" />
+  <link rel="stylesheet" href="css/settings.css" /> <!-- Revo Slider -->
   <link rel="stylesheet" href="css/magnific-popup.css" />
+  <link rel="stylesheet" href="css/style.css" />
+
   <style>
-    html, body {
-      margin: 0;
-      padding: 0;
-      overflow-x: hidden;
+    #videoModal {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.9);
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
     }
 
-    .hero-slider .item {
-      height: 100vh;
-      background-size: cover;
-      background-position: center center;
-      position: relative;
+    #videoModal video {
+      width: 90%;
+      max-width: 900px;
     }
 
-    .slider-content {
+    #videoModal .close {
       position: absolute;
-      top: 50%;
-      right: 5%;
-      transform: translateY(-50%);
+      top: 20px;
+      right: 30px;
+      font-size: 40px;
       color: #fff;
-      text-align: right;
+      cursor: pointer;
     }
 
-    .slider-content h1 {
-      font-size: 4rem;
+    .tp-caption {
+      color: #fff !important;
+      font-size: 120% !important;
+      line-height: 1.6 !important;
+    }
+
+    .rev-btn {
+      text-transform: uppercase;
+      border: 2px solid #fff;
+      font-size: 120%;
+      padding: 14px 30px;
+      background: none;
+      color: #fff;
+    }
+
+    .rev-btn:hover {
+      background-color: rgba(255, 255, 255, 0.15);
+    }
+
+    .tp-caption.large-white {
+      font-size: 50px;
       line-height: 1.2;
-      color: #fff;
-      text-transform: uppercase;
-      margin-bottom: 1rem;
+      font-weight: bold;
+      color: white;
     }
 
-    .slider-content p {
-      font-size: 1.4rem;
-      line-height: 1.6;
-      color: #fff;
-      margin-bottom: 1.8rem;
-    }
-
-    .slider-content .btn {
-      font-size: 1rem;
-      padding: 12px 28px;
-      border: 2px solid #fff;
-      background: transparent;
-      color: #fff;
-      text-transform: uppercase;
-      text-decoration: none;
-      transition: all 0.3s ease;
-    }
-
-    .slider-content .btn:hover {
-      background: #fff;
-      color: #000;
-    }
-
-    .slider-content .btn.green {
-      border-color: #62bb47;
-      color: #62bb47;
-    }
-
-    .slider-content .btn.green:hover {
-      background: #62bb47;
-      color: #fff;
-    }
-
-    .video-play-button {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 80px;
-      height: 80px;
-      margin-left: -40px;
-      margin-top: -40px;
-      border-radius: 50%;
-      background: rgba(255, 255, 255, 0.2);
-      border: 2px solid #fff;
-      text-align: center;
-      line-height: 76px;
-      color: #fff;
-      font-size: 2rem;
-      transition: all 0.3s ease;
-    }
-
-    .video-play-button:hover {
-      background: #fff;
-      color: #000;
-    }
-
-    .mfp-iframe-scaler iframe {
-      background: #000;
-    }
-
-    .owl-carousel .owl-nav button {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      font-size: 2rem;
-      color: #fff;
-      background: rgba(0, 0, 0, 0.2);
-      border: none;
-      width: 40px;
-      height: 60px;
-    }
-
-    .owl-carousel .owl-nav .owl-prev {
-      left: 0;
-    }
-
-    .owl-carousel .owl-nav .owl-next {
-      right: 0;
-    }
-
-    .owl-carousel .owl-dots {
-      position: absolute;
-      bottom: 20px;
-      right: 20px;
-    }
-
-    .owl-carousel .owl-dot span {
-      background: #fff;
-    }
-
-    @media (max-width: 768px) {
-      .slider-content {
-        left: 5%;
-        right: 5%;
-        text-align: center;
-      }
-
-      .slider-content h1 {
-        font-size: 2rem;
-      }
-
-      .slider-content p {
-        font-size: 1rem;
-      }
+    .tp-caption.medium-white {
+      font-size: 20px;
+      line-height: 1.5;
+      color: white;
     }
   </style>
 </head>
 <body>
 
-  <section class="hero-slider owl-carousel owl-theme">
-    <!-- Slide 1 -->
-    <div class="item" style="background-image: url('images/black-trans-man-rainbow-face-paint.jpeg')">
-      <div class="slider-content">
-        <h1>Welcome to the<br>Pauli Murray Awards<br>Foundation</h1>
-        <p>Honoring Black LGBTQ+ brilliance across generations and disciplines.</p>
-        <a href="about.html" class="btn">Learn More</a>
-      </div>
-    </div>
+  <!-- FULLSCREEN SLIDER -->
+  <section class="rev_slider_wrapper fullscreen-container">
+    <div id="rev_slider_1" class="rev_slider fullscreenbanner" style="display:none;">
+      <ul>
+        <!-- Slide 1 -->
+        <li data-transition="fade" data-thumb="images/thumb1.jpg">
+          <img src="images/black-trans-man-rainbow-face-paint.jpeg" alt="" class="rev-slidebg">
+          <div class="tp-caption large-white" data-x="right" data-y="center" data-voffset="-100" data-start="500" data-transform_in="y:[-100%];opacity:0;" data-transform_out="opacity:0;s:300;">
+            Welcome to the<br>Pauli Murray Awards<br>Foundation
+          </div>
+          <div class="tp-caption medium-white" data-x="right" data-y="center" data-voffset="0" data-start="800" data-transform_in="y:[100%];opacity:0;" data-transform_out="opacity:0;s:300;">
+            Honoring Black LGBTQ+ brilliance across generations and disciplines.
+          </div>
+          <div class="tp-caption" data-x="right" data-y="center" data-voffset="100" data-start="1100" data-transform_in="y:[100%];opacity:0;" data-transform_out="opacity:0;s:300;">
+            <a href="/about.html" class="rev-btn">LEARN MORE</a>
+          </div>
+        </li>
 
-    <!-- Slide 2 -->
-    <div class="item" style="background-image: url('images/pretty-killmonger-hair-pride-flag.jpeg')">
-      <div class="slider-content">
-        <h1>Fund the Future</h1>
-        <p>Your gift honors 40<br>emerging Black LGBTQ+ leaders.</p>
-        <a href="donate.html" class="btn">Donate</a>
-      </div>
-    </div>
+        <!-- Slide 2 -->
+        <li data-transition="fade" data-thumb="images/thumb2.jpg">
+          <img src="images/pretty-killmonger-hair-pride-flag.jpeg" alt="" class="rev-slidebg">
+          <div class="tp-caption large-white" data-x="right" data-y="center" data-voffset="-80" data-start="500" data-transform_in="y:[-100%];opacity:0;" data-transform_out="opacity:0;s:300;">
+            Fund the Future
+          </div>
+          <div class="tp-caption medium-white" data-x="right" data-y="center" data-voffset="0" data-start="800" data-transform_in="y:[100%];opacity:0;" data-transform_out="opacity:0;s:300;">
+            Your gift honors 40 emerging<br>Black LGBTQ+ leaders.
+          </div>
+          <div class="tp-caption" data-x="right" data-y="center" data-voffset="100" data-start="1100" data-transform_in="y:[100%];opacity:0;" data-transform_out="opacity:0;s:300;">
+            <a href="/donate.html" class="rev-btn">DONATE</a>
+          </div>
+        </li>
 
-    <!-- Slide 3 -->
-    <div class="item" style="background-image: url('images/black-woman-pride-flag-sun.jpeg')">
-      <div class="slider-content">
-        <h1>We Shine Together</h1>
-        <p>Every honoree is a mirror for what’s possible.<br>Every story matters.</p>
-      </div>
-    </div>
+        <!-- Slide 3 -->
+        <li data-transition="fade" data-thumb="images/thumb3.jpg">
+          <img src="images/black-woman-pride-flag-sun.jpeg" alt="" class="rev-slidebg">
+          <div class="tp-caption large-white" data-x="right" data-y="center" data-voffset="-80" data-start="500" data-transform_in="y:[-100%];opacity:0;" data-transform_out="opacity:0;s:300;">
+            We Shine Together
+          </div>
+          <div class="tp-caption medium-white" data-x="right" data-y="center" data-voffset="0" data-start="800" data-transform_in="y:[100%];opacity:0;" data-transform_out="opacity:0;s:300;">
+            Every honoree is a mirror for<br>what’s possible. Every story matters.
+          </div>
+        </li>
 
-    <!-- Slide 4 -->
-    <div class="item" style="background-image: url('images/my-name-is-pauli-murray-no-text.jpeg')">
-      <div class="slider-content" style="left: 5%; right: auto; text-align: left;">
-        <h1>
-          Poet. Lawyer.<br>
-          Activist. Priest.<br>
-          Prophet. Saint.
-        </h1>
-        <h1 style="font-size: 2.5rem; margin-top: 0.5rem;">
-          Architect of Modern<br>American Democracy
-        </h1>
-        <p style="margin-top: 1rem;">Click to watch the trailer from the powerful documentary<br>about Rev. Dr. Pauli Murray, Esq.</p>
-      </div>
-      <a href="images/my-name-is-pauli-murray-trailer.mp4" class="popup-video video-play-button"><i class="fa fa-play"></i></a>
+        <!-- Slide 4: Video -->
+        <li data-transition="fade" data-thumb="images/thumb4.jpg">
+          <img src="images/my-name-is-pauli-murray-no-text.jpeg" alt="" class="rev-slidebg">
+          <div class="tp-caption large-white" data-x="left" data-y="center" data-voffset="-120" data-start="500" data-transform_in="y:[-100%];opacity:0;" data-transform_out="opacity:0;s:300;">
+            Poet. Lawyer.<br>Activist. Priest.<br>Prophet. Saint.
+          </div>
+          <div class="tp-caption large-white" data-x="left" data-y="center" data-voffset="30" data-start="800" data-transform_in="y:[100%];opacity:0;" data-transform_out="opacity:0;s:300;" style="font-size: 48px; font-weight: bold;">
+            ARCHITECT OF<br>MODERN AMERICAN<br>DEMOCRACY
+          </div>
+          <div class="tp-caption medium-white" data-x="left" data-y="center" data-voffset="160" data-start="1100" data-transform_in="y:[100%];opacity:0;" data-transform_out="opacity:0;s:300;">
+            Click to watch the trailer from the powerful documentary,<br>“My Name Is Pauli Murray”.
+          </div>
+          <div class="tp-caption" data-x="left" data-y="center" data-voffset="260" data-start="1400" data-transform_in="y:[100%];opacity:0;" data-transform_out="opacity:0;s:300;">
+            <a href="javascript:void(0);" class="rev-btn" onclick="openModal()">▶</a>
+          </div>
+        </li>
+      </ul>
     </div>
   </section>
 
-  <!-- Scripts -->
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/owl.carousel.min.js"></script>
-  <script src="js/jquery.magnific-popup.min.js"></script>
+  <!-- VIDEO MODAL -->
+  <div id="videoModal">
+    <div class="close" onclick="closeModal()">×</div>
+    <video controls autoplay id="pauliVideo">
+      <source src="images/my-name-is-pauli-murray-trailer.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
 
+  <!-- SCRIPTS -->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.themepunch.tools.min.js"></script>
+  <script src="js/jquery.themepunch.revolution.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
   <script>
     $(document).ready(function () {
-      $(".hero-slider").owlCarousel({
-        items: 1,
+      $("#rev_slider_1").show().revolution({
+        sliderType: "standard",
+        jsFileLocation: "js/",
+        sliderLayout: "fullscreen",
+        delay: 7000,
+        navigation: {
+          arrows: { enable: true },
+          thumbnails: {
+            style: "hesperiden",
+            width: 120,
+            height: 60,
+            wrapper_padding: 5,
+            wrapper_color: "#000000",
+            visibleAmount: 5
+          }
+        },
+        gridwidth: 1230,
+        gridheight: 720,
+        lazyType: "none",
+        shadow: 0,
+        spinner: "off",
+        autoHeight: "off",
+        disableProgressBar: "on",
+        shuffle: "off",
         loop: true,
-        autoplay: true,
-        autoplayTimeout: 5000,
-        autoplayHoverPause: false,
-        nav: true,
-        dots: true,
-        animateOut: "fadeOut",
-        animateIn: "fadeIn"
-      });
-
-      $(".popup-video").magnificPopup({
-        type: "iframe"
+        stopLoop: "off",
+        autoPlay: true
       });
     });
-  </script>
 
+    function openModal() {
+      $('#videoModal').css('display', 'flex');
+      $('#pauliVideo')[0].play();
+    }
+
+    function closeModal() {
+      $('#videoModal').hide();
+      $('#pauliVideo')[0].pause();
+      $('#pauliVideo')[0].currentTime = 0;
+    }
+  </script>
 </body>
 </html>
